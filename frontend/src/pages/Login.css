@@ -1,0 +1,127 @@
+/* Shared styles for Login.jsx and Signup.jsx — bazaar ledger identity */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAF6EF;
+  padding: 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 380px;
+  background: #FFFDF9;
+  border: 1px solid #C9C2B3;
+  border-radius: 8px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 18px rgba(32, 42, 68, 0.06);
+}
+
+.login-box h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #202A44;
+  margin: 0 0 6px;
+}
+
+.login-box > p {
+  font-size: 14px;
+  color: #4A5578;
+  margin: 0 0 24px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #202A44;
+  margin: 14px 0 6px;
+}
+
+.login-box input {
+  padding: 11px 12px;
+  border: 1px solid #C9C2B3;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #202A44;
+  background: #FAF6EF;
+}
+
+.login-box input:focus {
+  outline: 2px solid #D9A441;
+  outline-offset: 1px;
+  border-color: #D9A441;
+}
+
+.login-box select {
+  padding: 11px 12px;
+  border: 1px solid #C9C2B3;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #202A44;
+  background: #FAF6EF;
+}
+
+.login-box select:focus {
+  outline: 2px solid #D9A441;
+  outline-offset: 1px;
+  border-color: #D9A441;
+}
+
+.login-box button[type="submit"] {
+  margin-top: 22px;
+  background: #202A44;
+  color: #FAF6EF;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-box button[type="submit"]:hover {
+  background: #2B375A;
+}
+
+.login-error {
+  color: #B5533C;
+  font-size: 13px;
+  margin: 12px 0 0;
+}
+
+.signup-prompt {
+  text-align: center;
+  font-size: 13px;
+  color: #4A5578;
+  margin-top: 22px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #D9A441;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.link-btn:hover {
+  color: #B5533C;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #D9A441;
+  outline-offset: 2px;
+}

@@ -1,0 +1,75 @@
+/* BSP CART sidebar: participates in layout instead of covering page content */
+.sidebar {
+  flex: 0 0 260px;
+  width: 260px;
+  min-width: 260px;
+  height: calc(100vh - 70px);
+  min-height: 0;
+  box-sizing: border-box;
+  background: #111827;
+  color: #fff;
+  position: sticky;
+  top: 70px;
+  left: auto;
+  padding: 25px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-self: flex-start;
+  z-index: 10;
+}
+
+.sidebar-logo {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #fff;
+}
+
+.sidebar-logo span {
+  color: #F97316;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #d1d5db;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #2563EB;
+  color: #fff;
+}
+
+.sidebar-logout {
+  width: 100%;
+  margin-top: 40px;
+  padding: 14px;
+  background: #EF4444;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.sidebar-logout:hover {
+  background: #dc2626;
+}
+
+/* Keep the sidebar beside the content on desktop; stack content on smaller screens. */
+@media (max-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+}

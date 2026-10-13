@@ -1,0 +1,30 @@
+/*
+| SweetAlert2 layering fixes
+|
+| - The fixed navbar and the custom <Modal> overlay both use z-index 9999,
+|   which is higher than SweetAlert's default 1060. Popups opened while a
+|   modal is open (e.g. "Check mobile number") ended up behind it and could
+|   not be clicked, and toasts were hidden behind the navbar.
+*/
+
+.swal2-container {
+  z-index: 20000 !important;
+}
+
+/* Toasts such as "Added to cart" start below the fixed navbar. */
+body.swal2-toast-shown .swal2-container.swal2-top-end {
+  top: calc(var(--navbar-height, 70px) + 8px) !important;
+}
+
+/* The navbar is taller on tablets / phones (search bar moves below it). */
+@media (max-width: 900px) {
+  body.swal2-toast-shown .swal2-container.swal2-top-end {
+    top: 133px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.swal2-toast-shown .swal2-container.swal2-top-end {
+    top: 143px !important;
+  }
+}
