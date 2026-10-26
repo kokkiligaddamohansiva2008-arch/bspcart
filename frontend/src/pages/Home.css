@@ -189,6 +189,17 @@ a {
   font-size: 11px;
 }
 
+.header-action > svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 1.8;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.header-action:hover > svg {
+  transform: translateY(-1px);
+}
+
 .header-action:hover {
   color: #d9a441;
 }
@@ -483,7 +494,21 @@ a {
 }
 
 .benefit-item > span {
-  font-size: 27px;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #f2eadc;
+  color: #b5533c;
+}
+
+.benefit-item > span svg {
+  width: 23px;
+  height: 23px;
+  stroke-width: 1.8;
 }
 
 .benefit-item div {
@@ -724,9 +749,21 @@ a {
 }
 
 .category-icon {
+  width: 58px;
+  height: 58px;
   margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #f2eadc;
+  color: #202a44;
+}
 
-  font-size: 38px;
+.category-icon svg {
+  width: 29px;
+  height: 29px;
+  stroke-width: 1.7;
 }
 
 .category-tile strong {
@@ -2065,4 +2102,37 @@ a:focus-visible {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+}
+
+/* Consistent modern outline SVG icons */
+.inline-ui-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.12em;
+  margin-right: 0.22em;
+  stroke-width: 1.8;
+}
+
+.search-button > svg,
+.mega-category-bar svg,
+.top-offer-bar svg,
+.seller-icon svg,
+.payment-card > span svg {
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.16em;
+  stroke-width: 1.9;
+}
+
+.seller-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seller-icon svg {
+  width: 38px;
+  height: 38px;
+  stroke-width: 1.6;
 }
