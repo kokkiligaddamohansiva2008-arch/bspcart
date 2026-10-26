@@ -72,7 +72,9 @@
 .pd-seller { font-size: 13.5px; color: #6B7280; margin: 0 0 10px; }
 
 .pd-rating-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
-.pd-stars { color: #D9A441; letter-spacing: 1px; }
+.pd-stars { color: #D9A441; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 2px; }
+.pd-stars svg { width: 15px; height: 15px; flex: 0 0 auto; }
+.pd-btn-wishlist svg { width: 16px; height: 16px; vertical-align: -3px; margin-right: 3px; }
 .pd-star { color: #E5E0D3; }
 .pd-star-full { color: #D9A441; }
 .pd-rating-value { font-weight: 700; font-size: 14px; }
