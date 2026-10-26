@@ -13,7 +13,7 @@ import DealCountdown from "../components/DealCountdown";
 import RecommendedProducts from "../components/RecommendedProducts";
 import useCart from "../hooks/useCart";
 import BuyItAgain from "../components/BuyItAgain";
-import { FiTruck, FiLock, FiRotateCcw, FiStore, FiMessageCircle, FiSearch, FiUser, FiShoppingCart, FiMenu, FiFlame, FiSmartphone, FiShoppingBag, FiHome, FiMonitor, FiHeadphones, FiCreditCard, FiBriefcase, FiDollarSign, FiGift, FiStar, FiAward, FiZap } from "react-icons/fi";
+import { FiTruck, FiLock, FiRotateCcw, FiPackage, FiMessageCircle, FiSearch, FiUser, FiShoppingCart, FiMenu, FiFlame, FiSmartphone, FiShoppingBag, FiHome, FiMonitor, FiHeadphones, FiCreditCard, FiBriefcase, FiDollarSign, FiGift, FiStar, FiAward, FiZap } from "react-icons/fi";
 import "./Home.css";
 
 const getCategoryProducts = (category) =>
@@ -551,7 +551,7 @@ export default function Home() {
         </div>
 
         <div className="benefit-item">
-          <span><FiStore aria-hidden="true" /></span>
+          <span><FiPackage aria-hidden="true" /></span>
           <div>
             <strong>Trusted Sellers</strong>
             <small>Multiple sellers marketplace</small>
@@ -1214,7 +1214,7 @@ export default function Home() {
       <section className="seller-cta">
 
         <div className="seller-icon">
-          <FiStore aria-hidden="true" />
+          <FiPackage aria-hidden="true" />
         </div>
 
         <div>
