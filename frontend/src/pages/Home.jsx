@@ -13,7 +13,7 @@ import DealCountdown from "../components/DealCountdown";
 import RecommendedProducts from "../components/RecommendedProducts";
 import useCart from "../hooks/useCart";
 import BuyItAgain from "../components/BuyItAgain";
-import { FiTruck, FiLock, FiRotateCcw, FiPackage, FiMessageCircle, FiSearch, FiUser, FiShoppingCart, FiMenu, FiFlame, FiSmartphone, FiShoppingBag, FiHome, FiMonitor, FiHeadphones, FiCreditCard, FiBriefcase, FiDollarSign, FiGift, FiStar, FiAward, FiZap } from "react-icons/fi";
+import { FiTruck, FiLock, FiRotateCcw, FiPackage, FiMessageCircle, FiSearch, FiUser, FiShoppingCart, FiMenu, FiFlame, FiSmartphone, FiShoppingBag, FiHome, FiMonitor, FiHeadphones, FiCreditCard, FiBriefcase, FiDollarSign, FiGift, FiStar, FiAward, FiZap, FiHeart, FiCheck } from "react-icons/fi";
 import "./Home.css";
 
 const getCategoryProducts = (category) =>
@@ -211,7 +211,7 @@ export default function Home() {
             onClick={() => toggleWishlist(product)}
             aria-label="Toggle wishlist"
           >
-            {wishlist.includes(product.id) ? "♥" : "♡"}
+            {wishlist.includes(product.id) ? <FiHeart fill="currentColor" aria-hidden="true" /> : <FiHeart aria-hidden="true" />}
           </button>
         </div>
 
@@ -231,7 +231,7 @@ export default function Home() {
           <div className="rating-line">
             {product.rating ? (
               <span className="rating-badge">
-                ★ {Number(product.rating).toFixed(1)}
+                <FiStar fill="currentColor" aria-hidden="true" /> {Number(product.rating).toFixed(1)}
               </span>
             ) : (
               <span className="rating-badge">New</span>
@@ -376,7 +376,7 @@ export default function Home() {
               })
             }
           >
-            ♡
+            <FiHeart aria-hidden="true" />
             <span>Wishlist</span>
 
             {wishlistCount > 0 && (
@@ -480,9 +480,9 @@ export default function Home() {
           </div>
 
           <div className="hero-trust-row">
-            <span>✓ Secure Shopping</span>
-            <span>✓ Trusted Sellers</span>
-            <span>✓ Easy Returns</span>
+            <span><FiCheck aria-hidden="true" /> Secure Shopping</span>
+            <span><FiCheck aria-hidden="true" /> Trusted Sellers</span>
+            <span><FiCheck aria-hidden="true" /> Easy Returns</span>
           </div>
         </div>
 
