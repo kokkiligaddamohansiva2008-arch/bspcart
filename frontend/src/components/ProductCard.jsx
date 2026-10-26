@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { discountPercent } from "../data/catalog";
+import { FiStar } from "react-icons/fi";
 
 function ProductCard({ product, onAddToCart, onView }) {
   const pct = discountPercent(product.price, product.mrp);
@@ -42,7 +43,7 @@ function ProductCard({ product, onAddToCart, onView }) {
           <p className="fw-bold mb-0">₹{product.price}</p>
           {pct > 0 && <span className="text-muted text-decoration-line-through small">₹{product.mrp}</span>}
           {product.rating && (
-            <span className="badge bg-success ms-auto">★ {product.rating.toFixed(1)}</span>
+            <span className="badge bg-success ms-auto d-inline-flex align-items-center gap-1"><FiStar aria-hidden="true" size={13} fill="currentColor" /> {product.rating.toFixed(1)}</span>
           )}
         </div>
 
