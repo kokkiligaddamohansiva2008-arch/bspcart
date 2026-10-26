@@ -19,6 +19,7 @@ import { addRecentlyViewed, isWishlisted, toggleWishlist } from "../utils/bspSto
 import DealCountdown from "../components/DealCountdown";
 import RecommendedProducts from "../components/RecommendedProducts";
 import useCart from "../hooks/useCart";
+import { FiHeart, FiStar } from "react-icons/fi";
 import "./ProductDetails.css";
 
 const EMI_ANNUAL_RATE = 0.14; // representative 14% p.a., shown for illustration only
@@ -53,9 +54,12 @@ function Stars({ value }) {
   return (
     <span className="pd-stars" aria-label={`${value} out of 5 stars`}>
       {[1, 2, 3, 4, 5].map((n) => (
-        <span key={n} className={n <= rounded ? "pd-star pd-star-full" : "pd-star"}>
-          ★
-        </span>
+        <FiStar
+          key={n}
+          className={n <= rounded ? "pd-star pd-star-full" : "pd-star"}
+          fill={n <= rounded ? "currentColor" : "none"}
+          aria-hidden="true"
+        />
       ))}
     </span>
   );
@@ -219,7 +223,7 @@ export default function ProductDetails() {
               className={"pd-btn pd-btn-wishlist" + (wishlisted ? " active" : "")}
               onClick={handleWishlist}
             >
-              {wishlisted ? "♥ Wishlisted" : "♡ Add to Wishlist"}
+              <><FiHeart aria-hidden="true" fill={wishlisted ? "currentColor" : "none"} /> {wishlisted ? "Wishlisted" : "Add to Wishlist"}</>
             </button>
           </div>
 
