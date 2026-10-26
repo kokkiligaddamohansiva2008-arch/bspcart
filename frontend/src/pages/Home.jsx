@@ -13,6 +13,7 @@ import DealCountdown from "../components/DealCountdown";
 import RecommendedProducts from "../components/RecommendedProducts";
 import useCart from "../hooks/useCart";
 import BuyItAgain from "../components/BuyItAgain";
+import { FiTruck, FiLock, FiRotateCcw, FiStore, FiMessageCircle, FiSearch, FiUser, FiShoppingCart, FiMenu, FiFlame, FiSmartphone, FiShoppingBag, FiHome, FiMonitor, FiHeadphones, FiCreditCard, FiBriefcase, FiDollarSign, FiGift, FiStar, FiAward, FiZap } from "react-icons/fi";
 import "./Home.css";
 
 const getCategoryProducts = (category) =>
@@ -299,7 +300,7 @@ export default function Home() {
       ====================================================== */}
       <div className="top-offer-bar">
         <div>
-          🎉 BSP CART FESTIVAL SALE — Extra savings every day
+          <FiGift aria-hidden="true" className="inline-ui-icon" /> BSP CART FESTIVAL SALE — Extra savings every day
         </div>
 
         <div className="top-links">
@@ -349,7 +350,7 @@ export default function Home() {
           />
 
           <button type="submit" className="search-button">
-            🔍 Search
+            <><FiSearch aria-hidden="true" /> Search</>
           </button>
         </form>
 
@@ -359,7 +360,7 @@ export default function Home() {
             className="header-action"
             onClick={() => navigate("/login")}
           >
-            👤
+            <FiUser aria-hidden="true" />
             <span>Account</span>
           </button>
 
@@ -387,7 +388,7 @@ export default function Home() {
             className="header-action cart-header"
             onClick={() => navigate("/cart")}
           >
-            🛒
+            <FiShoppingCart aria-hidden="true" />
             <span>Cart</span>
 
             {cartCount > 0 && (
@@ -402,7 +403,7 @@ export default function Home() {
       ====================================================== */}
       <div className="mega-category-bar">
         <div className="category-menu-item all-menu">
-          ☰ All Categories
+          <><FiMenu aria-hidden="true" /> All Categories</>
         </div>
 
         {CATEGORIES.slice(0, 8).map((category) => (
@@ -423,7 +424,7 @@ export default function Home() {
               ?.scrollIntoView({ behavior: "smooth" })
           }
         >
-          🔥 Today's Deals
+          <><FiFlame aria-hidden="true" /> Today's Deals</>
         </button>
       </div>
 
@@ -526,7 +527,7 @@ export default function Home() {
       <section className="benefit-strip">
 
         <div className="benefit-item">
-          <span>🚚</span>
+          <span><FiTruck aria-hidden="true" /></span>
           <div>
             <strong>Fast Delivery</strong>
             <small>Quick doorstep delivery</small>
@@ -534,7 +535,7 @@ export default function Home() {
         </div>
 
         <div className="benefit-item">
-          <span>🔒</span>
+          <span><FiLock aria-hidden="true" /></span>
           <div>
             <strong>Secure Payments</strong>
             <small>Safe and protected checkout</small>
@@ -542,7 +543,7 @@ export default function Home() {
         </div>
 
         <div className="benefit-item">
-          <span>↩️</span>
+          <span><FiRotateCcw aria-hidden="true" /></span>
           <div>
             <strong>Easy Returns</strong>
             <small>Simple return experience</small>
@@ -550,7 +551,7 @@ export default function Home() {
         </div>
 
         <div className="benefit-item">
-          <span>🏪</span>
+          <span><FiStore aria-hidden="true" /></span>
           <div>
             <strong>Trusted Sellers</strong>
             <small>Multiple sellers marketplace</small>
@@ -558,7 +559,7 @@ export default function Home() {
         </div>
 
         <div className="benefit-item">
-          <span>💬</span>
+          <span><FiMessageCircle aria-hidden="true" /></span>
           <div>
             <strong>Customer Support</strong>
             <small>We're here to help</small>
@@ -576,7 +577,7 @@ export default function Home() {
         <div className="section-heading light-heading">
           <div>
             <span>LIMITED TIME</span>
-            <h2>🔥 Mega Deals</h2>
+            <h2><FiFlame aria-hidden="true" className="inline-ui-icon" /> Mega Deals</h2>
             <p>
               Prices you don't want to miss.
             </p>
@@ -679,7 +680,7 @@ export default function Home() {
                 }
               >
                 <div className="category-icon">
-                  {["🛒", "📱", "👕", "🏠", "💻", "🎧"][
+                  {[<FiShoppingCart />, <FiSmartphone />, <FiShoppingBag />, <FiHome />, <FiMonitor />, <FiHeadphones>][
                     index % 6
                   ]}
                 </div>
@@ -784,7 +785,7 @@ export default function Home() {
 
           <div>
             <span>TECH ZONE</span>
-            <h2>📱 Electronics Deals</h2>
+            <h2><FiSmartphone aria-hidden="true" className="inline-ui-icon" /> Electronics Deals</h2>
             <p>
               Gadgets, accessories and everyday technology.
             </p>
@@ -813,7 +814,7 @@ export default function Home() {
 
           <div>
             <span>STYLE STORE</span>
-            <h2>👕 Fashion Picks</h2>
+            <h2><FiShoppingBag aria-hidden="true" className="inline-ui-icon" /> Fashion Picks</h2>
             <p>
               Everyday fashion at marketplace prices.
             </p>
@@ -842,7 +843,7 @@ export default function Home() {
 
           <div>
             <span>MAKE IT HOME</span>
-            <h2>🏠 Home & Living</h2>
+            <h2><FiHome aria-hidden="true" className="inline-ui-icon" /> Home & Living</h2>
             <p>
               Useful products for every corner of your home.
             </p>
@@ -870,14 +871,14 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span>EXTRA SAVINGS</span>
-            <h2>💳 Payment Offers</h2>
+            <h2><FiCreditCard aria-hidden="true" className="inline-ui-icon" /> Payment Offers</h2>
           </div>
         </div>
 
         <div className="payment-offer-grid">
 
           <div className="payment-card">
-            <span>🏦</span>
+            <span><FiBriefcase aria-hidden="true" /></span>
             <div>
               <strong>Bank Offer</strong>
               <h3>10% Instant Discount</h3>
@@ -895,7 +896,7 @@ export default function Home() {
           </div>
 
           <div className="payment-card">
-            <span>💰</span>
+            <span><FiDollarSign aria-hidden="true" /></span>
             <div>
               <strong>New Customer</strong>
               <h3>₹200 OFF</h3>
@@ -913,7 +914,7 @@ export default function Home() {
           </div>
 
           <div className="payment-card">
-            <span>🎁</span>
+            <span><FiGift aria-hidden="true" /></span>
             <div>
               <strong>Festival Offer</strong>
               <h3>Extra 15% OFF</h3>
@@ -964,7 +965,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span>CUSTOMER FAVOURITES</span>
-            <h2>⭐ Top Rated Products</h2>
+            <h2><FiStar aria-hidden="true" className="inline-ui-icon" /> Top Rated Products</h2>
             <p>
               Products customers are loving.
             </p>
@@ -988,7 +989,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span>JUST ARRIVED</span>
-            <h2>✨ New Arrivals</h2>
+            <h2><FiZap aria-hidden="true" className="inline-ui-icon" /> New Arrivals</h2>
             <p>
               Fresh products added to BSP CART.
             </p>
@@ -1048,7 +1049,7 @@ export default function Home() {
       <section className="festival-section">
 
         <div className="festival-copy">
-          <span>🎉 BSP CART FESTIVAL</span>
+          <span><FiGift aria-hidden="true" className="inline-ui-icon" /> BSP CART FESTIVAL</span>
 
           <h2>
             Celebrate more.
@@ -1089,7 +1090,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span>MOST POPULAR</span>
-            <h2>🏆 Bestsellers</h2>
+            <h2><FiAward aria-hidden="true" className="inline-ui-icon" /> Bestsellers</h2>
             <p>
               Popular products across BSP CART.
             </p>
@@ -1164,7 +1165,7 @@ export default function Home() {
 
         {filtered.length === 0 ? (
           <div className="empty-state">
-            <div>🔎</div>
+            <div><FiSearch aria-hidden="true" /></div>
 
             <h3>
               No products found
@@ -1213,7 +1214,7 @@ export default function Home() {
       <section className="seller-cta">
 
         <div className="seller-icon">
-          🏪
+          <FiStore aria-hidden="true" />
         </div>
 
         <div>
