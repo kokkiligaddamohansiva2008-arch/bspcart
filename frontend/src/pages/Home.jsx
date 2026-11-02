@@ -70,22 +70,22 @@ export default function Home() {
 
   const discountedProducts = useMemo(
     () => getDiscountedProducts(),
-    []
+    [catalogVersion]
   );
 
   const topRatedProducts = useMemo(
     () => getTopRatedProducts(),
-    []
+    [catalogVersion]
   );
 
   const newestProducts = useMemo(
     () => getNewestProducts(),
-    []
+    [catalogVersion]
   );
 
   const lowPriceProducts = useMemo(
     () => getLowPriceProducts(12),
-    []
+    [catalogVersion]
   );
 
   const filtered = useMemo(() => {
