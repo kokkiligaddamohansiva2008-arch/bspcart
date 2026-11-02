@@ -8,6 +8,15 @@ import {
   formatINR,
   discountPercent,
 } from "../data/catalog";
+import { ADDITIONAL_CATEGORIES, ADDITIONAL_PRODUCTS } from "../data/additionalProducts";
+
+// Merge supplementary catalogue entries without duplicating existing products.
+ADDITIONAL_PRODUCTS.forEach((item) => {
+  if (!PRODUCTS.some((existing) => existing.id === item.id)) PRODUCTS.push(item);
+});
+ADDITIONAL_CATEGORIES.forEach((item) => {
+  if (!CATEGORIES.some((existing) => existing.id === item.id)) CATEGORIES.push(item);
+});
 import { addRecentlyViewed } from "../utils/bspStorage";
 import { getSupabaseProducts } from "../services/supabaseProductService";
 import DealCountdown from "../components/DealCountdown";
