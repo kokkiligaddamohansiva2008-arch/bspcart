@@ -16,6 +16,7 @@ import {
   discountPercent,
 } from "../data/catalog";
 import { addRecentlyViewed, isWishlisted, toggleWishlist } from "../utils/bspStorage";
+import { getSupabaseProductById } from "../services/supabaseProductService";
 import DealCountdown from "../components/DealCountdown";
 import RecommendedProducts from "../components/RecommendedProducts";
 import useCart from "../hooks/useCart";
@@ -43,7 +44,7 @@ function buildMockReviews(product) {
   return templates.map((t, i) => ({
     id: `${product.id}-r${i}`,
     name: t.name,
-    rating: Math.max(3, Math.round(product.rating) - (i % 2)),
+    rating: Math.max(3, Math.round(product.rating || 4) - (i % 2)),
     comment: t.comment,
     daysAgo: t.days,
   }));
@@ -69,7 +70,20 @@ export default function ProductDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addItem } = useCart();
-  const product = useMemo(() => getProductById(id), [id]);
+  const localProduct = useMemo(() => getProductById(id), [id]);
+  const [databaseProduct, setDatabaseProduct] = useState(null);
+  const [productLoading, setProductLoading] = useState(true);
+  const product = databaseProduct || localProduct;
+
+  useEffect(() => {
+    let active = true;
+    setProductLoading(true);
+    getSupabaseProductById(id)
+      .then((item) => { if (active) setDatabaseProduct(item); })
+      .catch(() => { if (active) setDatabaseProduct(null); })
+      .finally(() => { if (active) setProductLoading(false); });
+    return () => { active = false; };
+  }, [id]);
 
   const [activeImage, setActiveImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -85,6 +99,10 @@ export default function ProductDetails() {
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [product]);
+
+  if (productLoading && !product) {
+    return <div className="pd-not-found"><h2>Loading product...</h2></div>;
+  }
 
   if (!product) {
     return (
@@ -158,8 +176,8 @@ export default function ProductDetails() {
 
           <div className="pd-rating-row">
             <Stars value={product.rating} />
-            <span className="pd-rating-value">{product.rating.toFixed(1)}</span>
-            <span className="pd-rating-count">({product.ratingCount.toLocaleString("en-IN")} ratings)</span>
+            <span className="pd-rating-value">{Number(product.rating || 0).toFixed(1)}</span>
+            <span className="pd-rating-count">({Number(product.ratingCount || 0).toLocaleString("en-IN")} ratings)</span>
             {product.bestseller && <span className="pd-bestseller-badge">#1 Bestseller</span>}
           </div>
 
@@ -279,7 +297,7 @@ export default function ProductDetails() {
           <span className="pd-reviews-score">{product.rating.toFixed(1)}</span>
           <div>
             <Stars value={product.rating} />
-            <p className="pd-rating-count">{product.ratingCount.toLocaleString("en-IN")} global ratings</p>
+            <p className="pd-rating-count">{Number(product.ratingCount || 0).toLocaleString("en-IN")} global ratings</p>
           </div>
         </div>
         <div className="pd-reviews-list">
