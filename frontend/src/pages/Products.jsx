@@ -188,8 +188,8 @@ const Products = () => {
   /*
    * Add product to cart.
    */
-  const addToCart = (productId) => {
-    addItem(productId, 1);
+  const addToCart = (productId, product) => {
+    addItem(product || productId, 1);
   };
 
   /*
