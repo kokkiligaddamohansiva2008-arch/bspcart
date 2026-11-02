@@ -34,7 +34,7 @@ const getTopRatedProducts = () =>
   [...PRODUCTS].sort((a, b) => (b.rating || 0) - (a.rating || 0));
 
 const getNewestProducts = () =>
-  [...PRODUCTS].sort((a, b) => Number(b.id) - Number(a.id));
+  [...PRODUCTS].sort((a, b) => Number(b.databaseId || b.id || 0) - Number(a.databaseId || a.id || 0));
 
 const getLowPriceProducts = (limit) =>
   [...PRODUCTS]
