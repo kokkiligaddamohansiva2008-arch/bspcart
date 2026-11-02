@@ -17,6 +17,7 @@ import {
 } from "../data/catalog";
 import { addRecentlyViewed, isWishlisted, toggleWishlist } from "../utils/bspStorage";
 import { getSupabaseProductById } from "../services/supabaseProductService";
+import { ADDITIONAL_PRODUCTS } from "../data/additionalProducts";
 import DealCountdown from "../components/DealCountdown";
 import RecommendedProducts from "../components/RecommendedProducts";
 import useCart from "../hooks/useCart";
@@ -70,7 +71,10 @@ export default function ProductDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addItem } = useCart();
-  const localProduct = useMemo(() => getProductById(id), [id]);
+  const localProduct = useMemo(
+    () => getProductById(id) || ADDITIONAL_PRODUCTS.find((item) => String(item.id) === String(id)),
+    [id]
+  );
   const [databaseProduct, setDatabaseProduct] = useState(null);
   const [productLoading, setProductLoading] = useState(true);
   const product = databaseProduct || localProduct;
