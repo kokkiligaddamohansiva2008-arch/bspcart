@@ -3,6 +3,9 @@ import { useSearchParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import ProductCard from "../components/ProductCard";
 import { CATEGORIES, PRODUCTS } from "../data/catalog";
+import { ADDITIONAL_CATEGORIES, ADDITIONAL_PRODUCTS } from "../data/additionalProducts";
+
+const ALL_CATEGORIES = [...CATEGORIES, ...ADDITIONAL_CATEGORIES];
 import { addRecentlyViewed } from "../utils/bspStorage";
 import { getSupabaseProducts } from "../services/supabaseProductService";
 import useCart from "../hooks/useCart";
@@ -100,7 +103,7 @@ const Products = () => {
       .split(/\s+/)
       .filter(Boolean);
 
-    let list = [...PRODUCTS, ...databaseProducts].filter((product) => {
+    let list = [...PRODUCTS, ...ADDITIONAL_PRODUCTS, ...databaseProducts].filter((product) => {
       // Category filtering
       const matchesCategory =
         category === "all" ||
@@ -305,7 +308,7 @@ const Products = () => {
       <div className="d-flex flex-wrap gap-2 mb-4">
 
         {/* CATEGORY BUTTONS */}
-        {CATEGORIES.map((c) => (
+        {ALL_CATEGORIES.map((c) => (
           <button
             key={c.id}
             type="button"
