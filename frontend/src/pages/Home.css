@@ -8,7 +8,7 @@
   min-height: 100vh;
   background: #faf6ef;
   color: #202a44;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: var(--font-body);
   overflow-x: hidden;
 }
 
@@ -89,7 +89,7 @@ a {
 
   border-radius: 8px;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
   font-size: 19px;
   font-weight: 800;
 }
@@ -101,7 +101,7 @@ a {
 }
 
 .brand-name {
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
   font-size: 21px;
   font-weight: 700;
 }
@@ -187,17 +187,6 @@ a {
 
 .header-action span {
   font-size: 11px;
-}
-
-.header-action > svg {
-  width: 21px;
-  height: 21px;
-  stroke-width: 1.8;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.header-action:hover > svg {
-  transform: translateY(-1px);
 }
 
 .header-action:hover {
@@ -323,7 +312,7 @@ a {
 .hero-copy h1 {
   margin: 0 0 20px;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: clamp(44px, 6vw, 78px);
   line-height: 0.98;
@@ -428,7 +417,7 @@ a {
 .hero-offer-big {
   margin: 17px 0;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 21px;
 }
@@ -494,21 +483,7 @@ a {
 }
 
 .benefit-item > span {
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  background: #f2eadc;
-  color: #b5533c;
-}
-
-.benefit-item > span svg {
-  width: 23px;
-  height: 23px;
-  stroke-width: 1.8;
+  font-size: 27px;
 }
 
 .benefit-item div {
@@ -564,7 +539,7 @@ a {
 .category-section-heading h2 {
   margin: 5px 0 5px;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 31px;
 }
@@ -712,70 +687,113 @@ a {
 
 .category-grid {
   display: grid;
-
-  grid-template-columns: repeat(6, 1fr);
-
-  gap: 15px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .category-tile {
-  min-height: 155px;
-
-  padding: 20px;
-
+  min-width: 0;
+  min-height: 0;
+  padding: 0 0 15px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #d5cebf;
-  border-radius: 9px;
-
+  align-items: stretch;
+  border: 1px solid #e3dccf;
+  border-radius: 14px;
   background: #fffdf9;
-
   color: #202a44;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  text-align: left;
+  box-shadow: 0 5px 18px rgba(32, 42, 68, 0.055);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .category-tile:hover {
-  transform: translateY(-5px);
-
-  box-shadow: 0 12px 28px rgba(32, 42, 68, 0.1);
-
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(32, 42, 68, 0.14);
   border-color: #d9a441;
 }
 
-.category-icon {
-  width: 58px;
-  height: 58px;
-  margin-bottom: 13px;
+.category-photo {
+  position: relative;
+  width: 100%;
+  height: 132px;
+  overflow: hidden;
+  background: #eee6d8;
+}
+
+.category-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.category-tile:hover .category-photo img {
+  transform: scale(1.07);
+}
+
+.category-photo-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 29, 51, 0.02), rgba(20, 29, 51, 0.34));
+}
+
+.category-photo-icon {
+  position: absolute;
+  right: 11px;
+  bottom: 10px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  background: rgba(255, 253, 249, .94);
+  color: #202a44;
+  font-size: 17px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+.category-tile > strong {
+  padding: 13px 13px 0;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.category-tile > small {
+  padding: 5px 13px 0;
+  color: #778098;
+  font-size: 10px;
+}
+
+.top-offer-bar > div:first-child {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  background: #f2eadc;
-  color: #202a44;
+  gap: 8px;
 }
 
-.category-icon svg {
-  width: 29px;
-  height: 29px;
-  stroke-width: 1.7;
+.top-offer-bar svg,
+.search-button svg,
+.header-action svg,
+.category-menu-item svg,
+.benefit-item svg,
+.section-heading h2 svg,
+.category-section-heading h2 svg {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.category-tile strong {
-  font-size: 13px;
+.header-action svg {
+  font-size: 19px;
 }
 
-.category-tile small {
-  margin-top: 6px;
-
-  color: #778098;
-
-  font-size: 10px;
+.benefit-item > span {
+  display: grid;
+  place-items: center;
+  color: #b5533c;
+  font-size: 25px;
 }
 
 /* =========================================================
@@ -853,7 +871,7 @@ a {
 
   margin: 9px 0;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 25px;
 }
@@ -1205,7 +1223,7 @@ a {
 .payment-card h3 {
   margin: 6px 0;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 21px;
 }
@@ -1286,7 +1304,7 @@ a {
 .under-nine-section h2 {
   margin: 7px 0;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 38px;
 }
@@ -1329,7 +1347,7 @@ a {
   background: #d9a441;
   color: #202a44;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
   font-size: 37px;
   font-weight: 700;
 }
@@ -1403,7 +1421,7 @@ a {
 .festival-copy h2 {
   margin: 10px 0 15px;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 49px;
   line-height: 1;
@@ -1452,7 +1470,7 @@ a {
 }
 
 .festival-discount strong {
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   color: #f4d16c;
 
@@ -1573,7 +1591,7 @@ a {
 .empty-state h3 {
   color: #202a44;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 25px;
 }
@@ -1631,7 +1649,7 @@ a {
 .seller-cta h2 {
   margin: 5px 0;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 29px;
 }
@@ -1682,7 +1700,7 @@ a {
 .newsletter h2 {
   margin: 7px 0;
 
-  font-family: "Fraunces", serif;
+  font-family: var(--font-display);
 
   font-size: 31px;
 }
@@ -2102,37 +2120,4 @@ a:focus-visible {
     scroll-behavior: auto !important;
     transition: none !important;
   }
-}
-
-/* Consistent modern outline SVG icons */
-.inline-ui-icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.12em;
-  margin-right: 0.22em;
-  stroke-width: 1.8;
-}
-
-.search-button > svg,
-.mega-category-bar svg,
-.top-offer-bar svg,
-.seller-icon svg,
-.payment-card > span svg {
-  width: 1.15em;
-  height: 1.15em;
-  vertical-align: -0.16em;
-  stroke-width: 1.9;
-}
-
-.seller-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.seller-icon svg {
-  width: 38px;
-  height: 38px;
-  stroke-width: 1.6;
 }
