@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import ProductCard from "../components/ProductCard";
 import { CATEGORIES, PRODUCTS } from "../data/catalog";
 import { addRecentlyViewed } from "../utils/bspStorage";
+import { getSupabaseProducts } from "../services/supabaseProductService";
 import useCart from "../hooks/useCart";
 
 const SORT_OPTIONS = [
@@ -24,6 +25,16 @@ const Products = () => {
   const [search, setSearch] = useState(urlSearch);
   const [category, setCategory] = useState("all");
   const [sort, setSort] = useState("relevance");
+  const [databaseProducts, setDatabaseProducts] = useState([]);
+  const [databaseError, setDatabaseError] = useState("");
+
+  useEffect(() => {
+    let active = true;
+    getSupabaseProducts()
+      .then((items) => { if (active) setDatabaseProducts(items); })
+      .catch((error) => { if (active) setDatabaseError(error.message); });
+    return () => { active = false; };
+  }, []);
 
   /*
    * Keep local search synchronized with the URL.
@@ -89,7 +100,7 @@ const Products = () => {
       .split(/\s+/)
       .filter(Boolean);
 
-    let list = PRODUCTS.filter((product) => {
+    let list = [...PRODUCTS, ...databaseProducts].filter((product) => {
       // Category filtering
       const matchesCategory =
         category === "all" ||
@@ -172,7 +183,7 @@ const Products = () => {
     }
 
     return list;
-  }, [search, category, sort]);
+  }, [search, category, sort, databaseProducts]);
 
   /*
    * Add product to cart.
@@ -327,6 +338,8 @@ const Products = () => {
           ))}
         </select>
       </div>
+
+      {databaseError && <div className="alert alert-warning" role="status">Live product data could not be loaded: {databaseError}</div>}
 
       {/* RESULT COUNT */}
       <div className="d-flex justify-content-between align-items-center mb-3">
