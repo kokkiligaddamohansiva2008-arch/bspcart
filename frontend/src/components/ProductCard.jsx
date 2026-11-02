@@ -27,7 +27,11 @@ function ProductCard({ product, onAddToCart, onView }) {
             src={product.imageUrl || product.image || "https://placehold.co/600x450?text=Product+Image"}
             onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "https://placehold.co/600x450?text=Image+Unavailable"; }}
             alt={product.name}
-            style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", borderRadius: "10px" }}
+            loading="lazy"
+            decoding="async"
+            width="300"
+            height="300"
+            style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: "10px" }}
           />
           {pct > 0 && (
             <span
