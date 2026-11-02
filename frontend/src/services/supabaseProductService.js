@@ -18,7 +18,8 @@ function headers(extra = {}) {
 
 function mapProduct(row) {
   return {
-    id: Number(row.id),
+    id: `supabase-${row.id}`,
+    databaseId: Number(row.id),
     name: row.name,
     title: row.name,
     description: row.description || "",
@@ -54,7 +55,8 @@ export async function getSupabaseProducts() {
 }
 
 export async function getSupabaseProductById(id) {
-  const rows = await requestProducts(`?select=id,name,description,price,image_url,stock,category_id&id=eq.${encodeURIComponent(id)}&limit=1`);
+  const databaseId = String(id).startsWith("supabase-") ? String(id).slice("supabase-".length) : id;
+  const rows = await requestProducts(`?select=id,name,description,price,image_url,stock,category_id&id=eq.${encodeURIComponent(databaseId)}&limit=1`);
   return rows.length ? mapProduct(rows[0]) : null;
 }
 
