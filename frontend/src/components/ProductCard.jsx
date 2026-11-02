@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { discountPercent } from "../data/catalog";
+import { discountPercent, formatINR } from "../data/catalog";
 import { FiStar } from "react-icons/fi";
 
 function ProductCard({ product, onAddToCart, onView }) {
-  const pct = discountPercent(product.price, product.mrp);
+  const price = Number(product.price);
+  const mrp = Number(product.mrp ?? product.price);
+  const safePrice = Number.isFinite(price) ? price : 0;
+  const pct = Number.isFinite(mrp) ? discountPercent(safePrice, mrp) : 0;
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -21,7 +24,8 @@ function ProductCard({ product, onAddToCart, onView }) {
           className="text-decoration-none text-dark position-relative"
         >
           <img
-            src={product.imageUrl || product.image || "https://via.placeholder.com/250"}
+            src={product.imageUrl || product.image || "https://placehold.co/600x450?text=Product+Image"}
+            onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "https://placehold.co/600x450?text=Image+Unavailable"; }}
             alt={product.name}
             style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", borderRadius: "10px" }}
           />
@@ -40,8 +44,8 @@ function ProductCard({ product, onAddToCart, onView }) {
         {product.description && <p className="text-muted small mb-1">{product.description}</p>}
 
         <div className="d-flex align-items-center gap-2 mb-1">
-          <p className="fw-bold mb-0">₹{product.price}</p>
-          {pct > 0 && <span className="text-muted text-decoration-line-through small">₹{product.mrp}</span>}
+          <p className="fw-bold mb-0">{formatINR(safePrice)}</p>
+          {pct > 0 && <span className="text-muted text-decoration-line-through small">{formatINR(mrp)}</span>}
           {product.rating && (
             <span className="badge bg-success ms-auto d-inline-flex align-items-center gap-1"><FiStar aria-hidden="true" size={13} fill="currentColor" /> {product.rating.toFixed(1)}</span>
           )}
