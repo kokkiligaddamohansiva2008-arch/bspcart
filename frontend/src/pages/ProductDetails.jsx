@@ -100,7 +100,7 @@ export default function ProductDetails() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [product]);
 
-  if (productLoading && !product) {
+  if (productLoading) {
     return <div className="pd-not-found"><h2>Loading product...</h2></div>;
   }
 
@@ -294,7 +294,7 @@ export default function ProductDetails() {
       <section className="pd-reviews">
         <h2>Ratings & Reviews</h2>
         <div className="pd-reviews-summary">
-          <span className="pd-reviews-score">{product.rating.toFixed(1)}</span>
+          <span className="pd-reviews-score">{Number(product.rating || 0).toFixed(1)}</span>
           <div>
             <Stars value={product.rating} />
             <p className="pd-rating-count">{Number(product.ratingCount || 0).toLocaleString("en-IN")} global ratings</p>
