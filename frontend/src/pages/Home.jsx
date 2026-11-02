@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import {
@@ -9,6 +9,7 @@ import {
   discountPercent,
 } from "../data/catalog";
 import { addRecentlyViewed } from "../utils/bspStorage";
+import { getSupabaseProducts } from "../services/supabaseProductService";
 import DealCountdown from "../components/DealCountdown";
 import RecommendedProducts from "../components/RecommendedProducts";
 import useCart from "../hooks/useCart";
@@ -48,8 +49,24 @@ export default function Home() {
   const { addItem, totalItems: cartCount } = useCart();
   const [wishlist, setWishlist] = useState([]);
   const [couponCopied, setCouponCopied] = useState("");
+  const [catalogVersion, setCatalogVersion] = useState(0);
 
-  const dealProducts = useMemo(() => getDealProducts(), []);
+  useEffect(() => {
+    let active = true;
+    getSupabaseProducts()
+      .then((items) => {
+        if (!active) return;
+        const newItems = items.filter((item) => !PRODUCTS.some((existing) => existing.id === item.id));
+        if (newItems.length) {
+          PRODUCTS.push(...newItems);
+          setCatalogVersion((version) => version + 1);
+        }
+      })
+      .catch((error) => console.error("Could not load live BSP CART products:", error));
+    return () => { active = false; };
+  }, []);
+
+  const dealProducts = useMemo(() => getDealProducts(), [catalogVersion]);
 
   const discountedProducts = useMemo(
     () => getDiscountedProducts(),
@@ -102,7 +119,7 @@ export default function Home() {
 
       return matchesCategory && matchesQuery;
     });
-  }, [activeCategory, query]);
+  }, [activeCategory, query, catalogVersion]);
 
   const wishlistCount = wishlist.length;
 
