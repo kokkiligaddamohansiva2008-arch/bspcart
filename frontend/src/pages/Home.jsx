@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { FiSearch, FiUser, FiShoppingCart, FiTruck, FiLock, FiRefreshCw, FiStore, FiMessageCircle, FiTag, FiSmartphone, FiShoppingBag, FiHome, FiGift, FiMenu, FiCreditCard, FiBriefcase, FiDollarSign, FiStar, FiZap, FiAward } from "react-icons/fi";
 import {
   CATEGORIES,
   PRODUCTS,
@@ -8,23 +9,20 @@ import {
   formatINR,
   discountPercent,
 } from "../data/catalog";
-import { ADDITIONAL_CATEGORIES, ADDITIONAL_PRODUCTS } from "../data/additionalProducts";
-
-// Merge supplementary catalogue entries without duplicating existing products.
-ADDITIONAL_PRODUCTS.forEach((item) => {
-  if (!PRODUCTS.some((existing) => existing.id === item.id)) PRODUCTS.push(item);
-});
-ADDITIONAL_CATEGORIES.forEach((item) => {
-  if (!CATEGORIES.some((existing) => existing.id === item.id)) CATEGORIES.push(item);
-});
-import { addRecentlyViewed } from "../utils/bspStorage";
-import { getSupabaseProducts } from "../services/supabaseProductService";
+import { addRecentlyViewed, getWishlist, toggleWishlist as toggleStoredWishlist } from "../utils/bspStorage";
+import { addToCart as addToStoredCart, useCartStore } from "../utils/cartStore";
 import DealCountdown from "../components/DealCountdown";
 import RecommendedProducts from "../components/RecommendedProducts";
-import useCart from "../hooks/useCart";
 import BuyItAgain from "../components/BuyItAgain";
-import { FiTruck, FiLock, FiRotateCcw, FiPackage, FiMessageCircle, FiSearch, FiUser, FiShoppingCart, FiMenu, FiFlame, FiSmartphone, FiShoppingBag, FiHome, FiMonitor, FiHeadphones, FiCreditCard, FiBriefcase, FiDollarSign, FiGift, FiStar, FiAward, FiZap, FiHeart, FiCheck } from "react-icons/fi";
 import "./Home.css";
+
+const categoryVisuals = {
+  all: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=720&h=480&q=75",
+  grocery: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=720&h=480&q=75",
+  electronics: "https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=720&h=480&q=75",
+  fashion: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=720&h=480&q=75",
+  home: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=720&h=480&q=75",
+};
 
 const getCategoryProducts = (category) =>
   PRODUCTS.filter(
@@ -43,7 +41,7 @@ const getTopRatedProducts = () =>
   [...PRODUCTS].sort((a, b) => (b.rating || 0) - (a.rating || 0));
 
 const getNewestProducts = () =>
-  [...PRODUCTS].sort((a, b) => Number(b.databaseId || b.id || 0) - Number(a.databaseId || a.id || 0));
+  [...PRODUCTS].sort((a, b) => Number(b.id) - Number(a.id));
 
 const getLowPriceProducts = (limit) =>
   [...PRODUCTS]
@@ -55,46 +53,30 @@ export default function Home() {
 
   const [activeCategory, setActiveCategory] = useState("all");
   const [query, setQuery] = useState("");
-  const { addItem, totalItems: cartCount } = useCart();
-  const [wishlist, setWishlist] = useState([]);
+  const { items: cartCount } = useCartStore();
+  const [wishlist, setWishlist] = useState(() => getWishlist());
   const [couponCopied, setCouponCopied] = useState("");
-  const [catalogVersion, setCatalogVersion] = useState(0);
 
-  useEffect(() => {
-    let active = true;
-    getSupabaseProducts()
-      .then((items) => {
-        if (!active) return;
-        const newItems = items.filter((item) => !PRODUCTS.some((existing) => existing.id === item.id));
-        if (newItems.length) {
-          PRODUCTS.push(...newItems);
-          setCatalogVersion((version) => version + 1);
-        }
-      })
-      .catch((error) => console.error("Could not load live BSP CART products:", error));
-    return () => { active = false; };
-  }, []);
-
-  const dealProducts = useMemo(() => getDealProducts(), [catalogVersion]);
+  const dealProducts = useMemo(() => getDealProducts(), []);
 
   const discountedProducts = useMemo(
     () => getDiscountedProducts(),
-    [catalogVersion]
+    []
   );
 
   const topRatedProducts = useMemo(
     () => getTopRatedProducts(),
-    [catalogVersion]
+    []
   );
 
   const newestProducts = useMemo(
     () => getNewestProducts(),
-    [catalogVersion]
+    []
   );
 
   const lowPriceProducts = useMemo(
     () => getLowPriceProducts(12),
-    [catalogVersion]
+    []
   );
 
   const filtered = useMemo(() => {
@@ -128,30 +110,34 @@ export default function Home() {
 
       return matchesCategory && matchesQuery;
     });
-  }, [activeCategory, query, catalogVersion]);
+  }, [activeCategory, query]);
 
-  const wishlistCount = wishlist.length;
+const wishlistCount = wishlist.length;
 
   const addToCart = (product) => {
-    addItem(product, 1);
+    const result = addToStoredCart(product.id, 1);
+
+    Swal.fire({
+      icon: result.ok ? "success" : "warning",
+      title: result.ok ? "Added to cart" : "Can't add this item",
+      text: result.ok
+        ? `${product.name} added successfully`
+        : "This product is currently out of stock.",
+      timer: 1400,
+      showConfirmButton: false,
+      position: "top-end",
+      toast: true,
+    });
   };
 
   const toggleWishlist = (product) => {
-    setWishlist((prev) => {
-      const exists = prev.includes(product.id);
-
-      if (exists) {
-        return prev.filter((id) => id !== product.id);
-      }
-
-      return [...prev, product.id];
-    });
+    const wasSaved = wishlist.includes(product.id);
+    toggleStoredWishlist(product.id);
+    setWishlist(getWishlist());
 
     Swal.fire({
-      icon: wishlist.includes(product.id) ? "info" : "success",
-      title: wishlist.includes(product.id)
-        ? "Removed from wishlist"
-        : "Added to wishlist",
+      icon: wasSaved ? "info" : "success",
+      title: wasSaved ? "Removed from wishlist" : "Added to wishlist",
       text: product.name,
       timer: 1000,
       showConfirmButton: false,
@@ -221,6 +207,8 @@ export default function Home() {
               src={product.image}
               alt={product.name}
               loading="lazy"
+              decoding="async"
+              onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://placehold.co/480x480/faf6ef/202a44?text=Product+Image"; }}
             />
           </Link>
 
@@ -237,7 +225,7 @@ export default function Home() {
             onClick={() => toggleWishlist(product)}
             aria-label="Toggle wishlist"
           >
-            {wishlist.includes(product.id) ? <FiHeart fill="currentColor" aria-hidden="true" /> : <FiHeart aria-hidden="true" />}
+            {wishlist.includes(product.id) ? "♥" : "♡"}
           </button>
         </div>
 
@@ -257,7 +245,7 @@ export default function Home() {
           <div className="rating-line">
             {product.rating ? (
               <span className="rating-badge">
-                <FiStar fill="currentColor" aria-hidden="true" /> {Number(product.rating).toFixed(1)}
+                ★ {Number(product.rating).toFixed(1)}
               </span>
             ) : (
               <span className="rating-badge">New</span>
@@ -326,7 +314,7 @@ export default function Home() {
       ====================================================== */}
       <div className="top-offer-bar">
         <div>
-          <FiGift aria-hidden="true" className="inline-ui-icon" /> BSP CART FESTIVAL SALE — Extra savings every day
+          <FiGift aria-hidden="true" /> BSP CART FESTIVAL SALE — Extra savings every day
         </div>
 
         <div className="top-links">
@@ -367,7 +355,7 @@ export default function Home() {
             );
           }}
         >
-          <input
+          <input id="home-search-for-products" name="search-for-products"
             type="search"
             className="search-input"
             placeholder="Search for products, brands and categories..."
@@ -376,7 +364,7 @@ export default function Home() {
           />
 
           <button type="submit" className="search-button">
-            <><FiSearch aria-hidden="true" /> Search</>
+            <FiSearch aria-hidden="true" /> Search
           </button>
         </form>
 
@@ -402,7 +390,7 @@ export default function Home() {
               })
             }
           >
-            <FiHeart aria-hidden="true" />
+            ♡
             <span>Wishlist</span>
 
             {wishlistCount > 0 && (
@@ -429,7 +417,7 @@ export default function Home() {
       ====================================================== */}
       <div className="mega-category-bar">
         <div className="category-menu-item all-menu">
-          <><FiMenu aria-hidden="true" /> All Categories</>
+          <FiMenu aria-hidden="true" /> All Categories
         </div>
 
         {CATEGORIES.slice(0, 8).map((category) => (
@@ -450,7 +438,7 @@ export default function Home() {
               ?.scrollIntoView({ behavior: "smooth" })
           }
         >
-          <><FiFlame aria-hidden="true" /> Today's Deals</>
+          <FiTag aria-hidden="true" /> Today's Deals
         </button>
       </div>
 
@@ -506,9 +494,9 @@ export default function Home() {
           </div>
 
           <div className="hero-trust-row">
-            <span><FiCheck aria-hidden="true" /> Secure Shopping</span>
-            <span><FiCheck aria-hidden="true" /> Trusted Sellers</span>
-            <span><FiCheck aria-hidden="true" /> Easy Returns</span>
+            <span>✓ Secure Shopping</span>
+            <span>✓ Trusted Sellers</span>
+            <span>✓ Easy Returns</span>
           </div>
         </div>
 
@@ -569,7 +557,7 @@ export default function Home() {
         </div>
 
         <div className="benefit-item">
-          <span><FiRotateCcw aria-hidden="true" /></span>
+          <span><FiRefreshCw aria-hidden="true" /></span>
           <div>
             <strong>Easy Returns</strong>
             <small>Simple return experience</small>
@@ -577,7 +565,7 @@ export default function Home() {
         </div>
 
         <div className="benefit-item">
-          <span><FiPackage aria-hidden="true" /></span>
+          <span><FiStore aria-hidden="true" /></span>
           <div>
             <strong>Trusted Sellers</strong>
             <small>Multiple sellers marketplace</small>
@@ -603,7 +591,7 @@ export default function Home() {
         <div className="section-heading light-heading">
           <div>
             <span>LIMITED TIME</span>
-            <h2><FiFlame aria-hidden="true" className="inline-ui-icon" /> Mega Deals</h2>
+            <h2><FiTag aria-hidden="true" /> Mega Deals</h2>
             <p>
               Prices you don't want to miss.
             </p>
@@ -705,10 +693,22 @@ export default function Home() {
                   browseCategory(category.id)
                 }
               >
-                <div className="category-icon">
-                  {[<FiShoppingCart />, <FiSmartphone />, <FiShoppingBag />, <FiHome />, <FiMonitor />, <FiHeadphones>][
-                    index % 6
-                  ]}
+                <div className="category-photo">
+                  <img
+                    src={category.image || categoryVisuals[category.id] || categoryVisuals.grocery}
+                    alt={category.label}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="category-photo-shade" />
+                  <span className="category-photo-icon" aria-hidden="true">
+                    {category.id.includes("electronic") ? <FiSmartphone /> :
+                      category.id.includes("fashion") ? <FiShoppingBag /> :
+                      category.id.includes("home") ? <FiHome /> :
+                      category.id.includes("gift") ? <FiGift /> :
+                      category.id.includes("auto") ? <FiTruck /> :
+                      <FiShoppingCart />}
+                  </span>
                 </div>
 
                 <strong>{category.label}</strong>
@@ -811,7 +811,7 @@ export default function Home() {
 
           <div>
             <span>TECH ZONE</span>
-            <h2><FiSmartphone aria-hidden="true" className="inline-ui-icon" /> Electronics Deals</h2>
+            <h2><FiSmartphone aria-hidden="true" /> Electronics Deals</h2>
             <p>
               Gadgets, accessories and everyday technology.
             </p>
@@ -840,7 +840,7 @@ export default function Home() {
 
           <div>
             <span>STYLE STORE</span>
-            <h2><FiShoppingBag aria-hidden="true" className="inline-ui-icon" /> Fashion Picks</h2>
+            <h2><FiShoppingBag aria-hidden="true" /> Fashion Picks</h2>
             <p>
               Everyday fashion at marketplace prices.
             </p>
@@ -869,7 +869,7 @@ export default function Home() {
 
           <div>
             <span>MAKE IT HOME</span>
-            <h2><FiHome aria-hidden="true" className="inline-ui-icon" /> Home & Living</h2>
+            <h2><FiHome aria-hidden="true" /> Home & Living</h2>
             <p>
               Useful products for every corner of your home.
             </p>
@@ -897,7 +897,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span>EXTRA SAVINGS</span>
-            <h2><FiCreditCard aria-hidden="true" className="inline-ui-icon" /> Payment Offers</h2>
+            <h2><FiCreditCard aria-hidden="true" /> Payment Offers</h2>
           </div>
         </div>
 
@@ -991,7 +991,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span>CUSTOMER FAVOURITES</span>
-            <h2><FiStar aria-hidden="true" className="inline-ui-icon" /> Top Rated Products</h2>
+            <h2><FiStar aria-hidden="true" /> Top Rated Products</h2>
             <p>
               Products customers are loving.
             </p>
@@ -1015,7 +1015,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span>JUST ARRIVED</span>
-            <h2><FiZap aria-hidden="true" className="inline-ui-icon" /> New Arrivals</h2>
+            <h2><FiZap aria-hidden="true" /> New Arrivals</h2>
             <p>
               Fresh products added to BSP CART.
             </p>
@@ -1075,7 +1075,7 @@ export default function Home() {
       <section className="festival-section">
 
         <div className="festival-copy">
-          <span><FiGift aria-hidden="true" className="inline-ui-icon" /> BSP CART FESTIVAL</span>
+          <span><FiGift aria-hidden="true" /> BSP CART FESTIVAL</span>
 
           <h2>
             Celebrate more.
@@ -1116,7 +1116,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span>MOST POPULAR</span>
-            <h2><FiAward aria-hidden="true" className="inline-ui-icon" /> Bestsellers</h2>
+            <h2><FiAward aria-hidden="true" /> Bestsellers</h2>
             <p>
               Popular products across BSP CART.
             </p>
@@ -1240,7 +1240,7 @@ export default function Home() {
       <section className="seller-cta">
 
         <div className="seller-icon">
-          <FiPackage aria-hidden="true" />
+          <FiStore aria-hidden="true" />
         </div>
 
         <div>
@@ -1263,51 +1263,6 @@ export default function Home() {
         >
           Start Selling →
         </button>
-      </section>
-
-      {/* ======================================================
-          NEWSLETTER
-      ====================================================== */}
-      <section className="newsletter">
-
-        <div>
-          <span>STAY IN THE LOOP</span>
-
-          <h2>
-            Get the latest deals delivered.
-          </h2>
-
-          <p>
-            New products, special offers and marketplace
-            updates.
-          </p>
-        </div>
-
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-
-            Swal.fire({
-              icon: "success",
-              title: "You're subscribed!",
-              text: "Welcome to BSP CART updates.",
-              timer: 1500,
-              showConfirmButton: false,
-            });
-
-            e.target.reset();
-          }}
-        >
-          <input
-            type="email"
-            placeholder="Enter your email address"
-            required
-          />
-
-          <button type="submit">
-            Subscribe
-          </button>
-        </form>
       </section>
     </div>
   );
