@@ -9,7 +9,7 @@ function ProductCard({ product, onAddToCart, onView }) {
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    if (onAddToCart) onAddToCart(product.id);
+    if (onAddToCart) onAddToCart(product.id, product);
   };
 
   return (
