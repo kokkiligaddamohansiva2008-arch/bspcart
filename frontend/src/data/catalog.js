@@ -196,10 +196,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.9,
     "ratingCount": 98,
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Whole Wheat Atta 5kg", "grocery", 9),
+    images: [productThumbnail("Whole Wheat Atta 5kg", "grocery", 9)],
     "description": "Quality whole wheat atta 5kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -226,10 +224,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4,
     "ratingCount": 105,
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Toor Dal 1kg", "grocery", 10),
+    images: [productThumbnail("Toor Dal 1kg", "grocery", 10)],
     "description": "Quality toor dal 1kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -256,10 +252,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.1,
     "ratingCount": 112,
-    "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Moong Dal 1kg", "grocery", 11),
+    images: [productThumbnail("Moong Dal 1kg", "grocery", 11)],
     "description": "Quality moong dal 1kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -286,10 +280,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.2,
     "ratingCount": 119,
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Chana Dal 1kg", "grocery", 12),
+    images: [productThumbnail("Chana Dal 1kg", "grocery", 12)],
     "description": "Quality chana dal 1kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -316,10 +308,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.3,
     "ratingCount": 126,
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Organic Jaggery 1kg", "grocery", 13),
+    images: [productThumbnail("Organic Jaggery 1kg", "grocery", 13)],
     "description": "Quality organic jaggery 1kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -346,10 +336,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.4,
     "ratingCount": 133,
-    "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("White Sugar 1kg", "grocery", 14),
+    images: [productThumbnail("White Sugar 1kg", "grocery", 14)],
     "description": "Quality white sugar 1kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -376,10 +364,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.5,
     "ratingCount": 140,
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Rock Salt 1kg", "grocery", 15),
+    images: [productThumbnail("Rock Salt 1kg", "grocery", 15)],
     "description": "Quality rock salt 1kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -406,10 +392,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.6,
     "ratingCount": 147,
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Sunflower Oil 1L", "grocery", 16),
+    images: [productThumbnail("Sunflower Oil 1L", "grocery", 16)],
     "description": "Quality sunflower oil 1l selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -436,10 +420,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.7,
     "ratingCount": 154,
-    "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Olive Oil 500ml", "grocery", 17),
+    images: [productThumbnail("Olive Oil 500ml", "grocery", 17)],
     "description": "Quality olive oil 500ml selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -466,10 +448,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.8,
     "ratingCount": 161,
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Green Tea 100 Bags", "grocery", 18),
+    images: [productThumbnail("Green Tea 100 Bags", "grocery", 18)],
     "description": "Quality green tea 100 bags selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -496,10 +476,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.9,
     "ratingCount": 168,
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Filter Coffee Powder 500g", "grocery", 19),
+    images: [productThumbnail("Filter Coffee Powder 500g", "grocery", 19)],
     "description": "Quality filter coffee powder 500g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -526,10 +504,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4,
     "ratingCount": 175,
-    "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Instant Coffee 200g", "grocery", 20),
+    images: [productThumbnail("Instant Coffee 200g", "grocery", 20)],
     "description": "Quality instant coffee 200g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -556,10 +532,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.1,
     "ratingCount": 182,
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Corn Flakes 500g", "grocery", 21),
+    images: [productThumbnail("Corn Flakes 500g", "grocery", 21)],
     "description": "Quality corn flakes 500g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -586,10 +560,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.2,
     "ratingCount": 189,
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Rolled Oats 1kg", "grocery", 22),
+    images: [productThumbnail("Rolled Oats 1kg", "grocery", 22)],
     "description": "Quality rolled oats 1kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -616,10 +588,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.3,
     "ratingCount": 196,
-    "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Honey 500g", "grocery", 23),
+    images: [productThumbnail("Honey 500g", "grocery", 23)],
     "description": "Quality honey 500g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -646,10 +616,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.4,
     "ratingCount": 203,
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Peanut Butter 1kg", "grocery", 24),
+    images: [productThumbnail("Peanut Butter 1kg", "grocery", 24)],
     "description": "Quality peanut butter 1kg selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -676,10 +644,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.5,
     "ratingCount": 210,
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Mixed Dry Fruits 500g", "grocery", 25),
+    images: [productThumbnail("Mixed Dry Fruits 500g", "grocery", 25)],
     "description": "Quality mixed dry fruits 500g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -706,10 +672,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.6,
     "ratingCount": 217,
-    "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Cashew Nuts 250g", "grocery", 26),
+    images: [productThumbnail("Cashew Nuts 250g", "grocery", 26)],
     "description": "Quality cashew nuts 250g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -736,10 +700,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.7,
     "ratingCount": 224,
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Almonds 250g", "grocery", 27),
+    images: [productThumbnail("Almonds 250g", "grocery", 27)],
     "description": "Quality almonds 250g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -766,10 +728,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.8,
     "ratingCount": 231,
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Raisins 500g", "grocery", 28),
+    images: [productThumbnail("Raisins 500g", "grocery", 28)],
     "description": "Quality raisins 500g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -796,10 +756,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.9,
     "ratingCount": 238,
-    "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Masala Spice Combo", "grocery", 29),
+    images: [productThumbnail("Masala Spice Combo", "grocery", 29)],
     "description": "Quality masala spice combo selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -826,10 +784,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4,
     "ratingCount": 245,
-    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Pickle Jar 500g", "grocery", 30),
+    images: [productThumbnail("Pickle Jar 500g", "grocery", 30)],
     "description": "Quality pickle jar 500g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -856,10 +812,8 @@ const EXTRA_PRODUCTS = [
     "seller": "FreshMart",
     "rating": 4.1,
     "ratingCount": 252,
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Premium Tea 500g", "grocery", 31),
+    images: [productThumbnail("Premium Tea 500g", "grocery", 31)],
     "description": "Quality premium tea 500g selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -886,10 +840,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.2,
     "ratingCount": 259,
-    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Bluetooth Speaker", "electronics", 32),
+    images: [productThumbnail("Bluetooth Speaker", "electronics", 32)],
     "description": "Quality bluetooth speaker selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -916,10 +868,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.3,
     "ratingCount": 266,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Over-Ear Headphones", "electronics", 33),
+    images: [productThumbnail("Over-Ear Headphones", "electronics", 33)],
     "description": "Quality over-ear headphones selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -946,10 +896,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.4,
     "ratingCount": 273,
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Wireless Mouse", "electronics", 34),
+    images: [productThumbnail("Wireless Mouse", "electronics", 34)],
     "description": "Quality wireless mouse selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -976,10 +924,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.5,
     "ratingCount": 280,
-    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Mechanical Keyboard", "electronics", 35),
+    images: [productThumbnail("Mechanical Keyboard", "electronics", 35)],
     "description": "Quality mechanical keyboard selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1006,10 +952,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.6,
     "ratingCount": 287,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("USB-C Cable 2m", "electronics", 36),
+    images: [productThumbnail("USB-C Cable 2m", "electronics", 36)],
     "description": "Quality usb-c cable 2m selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1036,10 +980,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.7,
     "ratingCount": 294,
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Power Bank 20000mAh", "electronics", 37),
+    images: [productThumbnail("Power Bank 20000mAh", "electronics", 37)],
     "description": "Quality power bank 20000mah selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1066,10 +1008,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.8,
     "ratingCount": 301,
-    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Smart Watch", "electronics", 38),
+    images: [productThumbnail("Smart Watch", "electronics", 38)],
     "description": "Quality smart watch selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1096,10 +1036,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.9,
     "ratingCount": 308,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Fitness Band", "electronics", 39),
+    images: [productThumbnail("Fitness Band", "electronics", 39)],
     "description": "Quality fitness band selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1126,10 +1064,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4,
     "ratingCount": 315,
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Phone Tripod Stand", "electronics", 40),
+    images: [productThumbnail("Phone Tripod Stand", "electronics", 40)],
     "description": "Quality phone tripod stand selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1156,10 +1092,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.1,
     "ratingCount": 322,
-    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Ring Light with Stand", "electronics", 41),
+    images: [productThumbnail("Ring Light with Stand", "electronics", 41)],
     "description": "Quality ring light with stand selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1186,10 +1120,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.2,
     "ratingCount": 329,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Webcam 1080p", "electronics", 42),
+    images: [productThumbnail("Webcam 1080p", "electronics", 42)],
     "description": "Quality webcam 1080p selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1216,10 +1148,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.3,
     "ratingCount": 336,
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Laptop Stand", "electronics", 43),
+    images: [productThumbnail("Laptop Stand", "electronics", 43)],
     "description": "Quality laptop stand selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1246,10 +1176,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.4,
     "ratingCount": 343,
-    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Laptop Backpack", "electronics", 44),
+    images: [productThumbnail("Laptop Backpack", "electronics", 44)],
     "description": "Quality laptop backpack selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1276,10 +1204,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.5,
     "ratingCount": 350,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Portable SSD 1TB", "electronics", 45),
+    images: [productThumbnail("Portable SSD 1TB", "electronics", 45)],
     "description": "Quality portable ssd 1tb selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1306,10 +1232,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.6,
     "ratingCount": 357,
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("USB Hub 4-Port", "electronics", 46),
+    images: [productThumbnail("USB Hub 4-Port", "electronics", 46)],
     "description": "Quality usb hub 4-port selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1336,10 +1260,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.7,
     "ratingCount": 364,
-    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("HDMI Cable 2m", "electronics", 47),
+    images: [productThumbnail("HDMI Cable 2m", "electronics", 47)],
     "description": "Quality hdmi cable 2m selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1366,10 +1288,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.8,
     "ratingCount": 371,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Gaming Controller", "electronics", 48),
+    images: [productThumbnail("Gaming Controller", "electronics", 48)],
     "description": "Quality gaming controller selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1396,10 +1316,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.9,
     "ratingCount": 378,
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Desk LED Lamp", "electronics", 49),
+    images: [productThumbnail("Desk LED Lamp", "electronics", 49)],
     "description": "Quality desk led lamp selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1426,10 +1344,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4,
     "ratingCount": 385,
-    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Wi-Fi Router", "electronics", 50),
+    images: [productThumbnail("Wi-Fi Router", "electronics", 50)],
     "description": "Quality wi-fi router selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1456,10 +1372,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.1,
     "ratingCount": 392,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Smart Plug", "electronics", 51),
+    images: [productThumbnail("Smart Plug", "electronics", 51)],
     "description": "Quality smart plug selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1486,10 +1400,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.2,
     "ratingCount": 399,
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Electric Trimmer", "electronics", 52),
+    images: [productThumbnail("Electric Trimmer", "electronics", 52)],
     "description": "Quality electric trimmer selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1516,10 +1428,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.3,
     "ratingCount": 406,
-    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Hair Dryer", "electronics", 53),
+    images: [productThumbnail("Hair Dryer", "electronics", 53)],
     "description": "Quality hair dryer selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1546,10 +1456,8 @@ const EXTRA_PRODUCTS = [
     "seller": "TechBazaar",
     "rating": 4.4,
     "ratingCount": 413,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Digital Alarm Clock", "electronics", 54),
+    images: [productThumbnail("Digital Alarm Clock", "electronics", 54)],
     "description": "Quality digital alarm clock selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1576,10 +1484,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.5,
     "ratingCount": 420,
-    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Women's Cotton Kurti", "fashion", 55),
+    images: [productThumbnail("Women's Cotton Kurti", "fashion", 55)],
     "description": "Quality women's cotton kurti selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1606,10 +1512,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.6,
     "ratingCount": 427,
-    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Men's Casual Shirt", "fashion", 56),
+    images: [productThumbnail("Men's Casual Shirt", "fashion", 56)],
     "description": "Quality men's casual shirt selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1636,10 +1540,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.7,
     "ratingCount": 434,
-    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Women's Denim Jeans", "fashion", 57),
+    images: [productThumbnail("Women's Denim Jeans", "fashion", 57)],
     "description": "Quality women's denim jeans selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1666,10 +1568,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.8,
     "ratingCount": 441,
-    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Men's Slim Fit Jeans", "fashion", 58),
+    images: [productThumbnail("Men's Slim Fit Jeans", "fashion", 58)],
     "description": "Quality men's slim fit jeans selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1696,10 +1596,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.9,
     "ratingCount": 448,
-    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Cotton T-Shirt", "fashion", 59),
+    images: [productThumbnail("Cotton T-Shirt", "fashion", 59)],
     "description": "Quality cotton t-shirt selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1726,10 +1624,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4,
     "ratingCount": 455,
-    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Polo T-Shirt", "fashion", 60),
+    images: [productThumbnail("Polo T-Shirt", "fashion", 60)],
     "description": "Quality polo t-shirt selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1756,10 +1652,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.1,
     "ratingCount": 462,
-    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Women's Leggings", "fashion", 61),
+    images: [productThumbnail("Women's Leggings", "fashion", 61)],
     "description": "Quality women's leggings selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1786,10 +1680,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.2,
     "ratingCount": 469,
-    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Printed Dupatta", "fashion", 62),
+    images: [productThumbnail("Printed Dupatta", "fashion", 62)],
     "description": "Quality printed dupatta selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1816,10 +1708,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.3,
     "ratingCount": 476,
-    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Ethnic Dress", "fashion", 63),
+    images: [productThumbnail("Ethnic Dress", "fashion", 63)],
     "description": "Quality ethnic dress selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1846,10 +1736,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.4,
     "ratingCount": 483,
-    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Men's Formal Trousers", "fashion", 64),
+    images: [productThumbnail("Men's Formal Trousers", "fashion", 64)],
     "description": "Quality men's formal trousers selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1876,10 +1764,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.5,
     "ratingCount": 490,
-    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Running Shoes", "fashion", 65),
+    images: [productThumbnail("Running Shoes", "fashion", 65)],
     "description": "Quality running shoes selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1906,10 +1792,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.6,
     "ratingCount": 497,
-    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Casual Sneakers", "fashion", 66),
+    images: [productThumbnail("Casual Sneakers", "fashion", 66)],
     "description": "Quality casual sneakers selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1936,10 +1820,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.7,
     "ratingCount": 504,
-    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Women's Sandals", "fashion", 67),
+    images: [productThumbnail("Women's Sandals", "fashion", 67)],
     "description": "Quality women's sandals selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1966,10 +1848,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.8,
     "ratingCount": 511,
-    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Men's Flip-Flops", "fashion", 68),
+    images: [productThumbnail("Men's Flip-Flops", "fashion", 68)],
     "description": "Quality men's flip-flops selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -1996,10 +1876,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.9,
     "ratingCount": 518,
-    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Leather Wallet", "fashion", 69),
+    images: [productThumbnail("Leather Wallet", "fashion", 69)],
     "description": "Quality leather wallet selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2026,10 +1904,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4,
     "ratingCount": 525,
-    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Everyday Handbag", "fashion", 70),
+    images: [productThumbnail("Everyday Handbag", "fashion", 70)],
     "description": "Quality everyday handbag selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2056,10 +1932,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.1,
     "ratingCount": 532,
-    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Canvas Backpack", "fashion", 71),
+    images: [productThumbnail("Canvas Backpack", "fashion", 71)],
     "description": "Quality canvas backpack selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2086,10 +1960,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.2,
     "ratingCount": 539,
-    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Classic Belt", "fashion", 72),
+    images: [productThumbnail("Classic Belt", "fashion", 72)],
     "description": "Quality classic belt selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2116,10 +1988,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.3,
     "ratingCount": 546,
-    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Sunglasses", "fashion", 73),
+    images: [productThumbnail("Sunglasses", "fashion", 73)],
     "description": "Quality sunglasses selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2146,10 +2016,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.4,
     "ratingCount": 553,
-    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Analog Wrist Watch", "fashion", 74),
+    images: [productThumbnail("Analog Wrist Watch", "fashion", 74)],
     "description": "Quality analog wrist watch selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2176,10 +2044,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.5,
     "ratingCount": 560,
-    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Cotton Socks 3-Pack", "fashion", 75),
+    images: [productThumbnail("Cotton Socks 3-Pack", "fashion", 75)],
     "description": "Quality cotton socks 3-pack selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2206,10 +2072,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.6,
     "ratingCount": 567,
-    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Winter Hoodie", "fashion", 76),
+    images: [productThumbnail("Winter Hoodie", "fashion", 76)],
     "description": "Quality winter hoodie selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2236,10 +2100,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Style Junction",
     "rating": 4.7,
     "ratingCount": 574,
-    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Rain Jacket", "fashion", 77),
+    images: [productThumbnail("Rain Jacket", "fashion", 77)],
     "description": "Quality rain jacket selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2266,10 +2128,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.8,
     "ratingCount": 581,
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Ceramic Dinner Set", "home", 78),
+    images: [productThumbnail("Ceramic Dinner Set", "home", 78)],
     "description": "Quality ceramic dinner set selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2296,10 +2156,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.9,
     "ratingCount": 588,
-    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Stainless Steel Cookware Set", "home", 79),
+    images: [productThumbnail("Stainless Steel Cookware Set", "home", 79)],
     "description": "Quality stainless steel cookware set selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2326,10 +2184,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4,
     "ratingCount": 595,
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Pressure Cooker 5L", "home", 80),
+    images: [productThumbnail("Pressure Cooker 5L", "home", 80)],
     "description": "Quality pressure cooker 5l selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2356,10 +2212,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.1,
     "ratingCount": 602,
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Electric Kettle 1.5L", "home", 81),
+    images: [productThumbnail("Electric Kettle 1.5L", "home", 81)],
     "description": "Quality electric kettle 1.5l selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2386,10 +2240,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.2,
     "ratingCount": 609,
-    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Mixer Grinder", "home", 82),
+    images: [productThumbnail("Mixer Grinder", "home", 82)],
     "description": "Quality mixer grinder selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2416,10 +2268,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.3,
     "ratingCount": 616,
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Storage Container Set", "home", 83),
+    images: [productThumbnail("Storage Container Set", "home", 83)],
     "description": "Quality storage container set selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2446,10 +2296,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.4,
     "ratingCount": 623,
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Non-Stick Frying Pan", "home", 84),
+    images: [productThumbnail("Non-Stick Frying Pan", "home", 84)],
     "description": "Quality non-stick frying pan selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2476,10 +2324,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.5,
     "ratingCount": 630,
-    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Kitchen Knife Set", "home", 85),
+    images: [productThumbnail("Kitchen Knife Set", "home", 85)],
     "description": "Quality kitchen knife set selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2506,10 +2352,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.6,
     "ratingCount": 637,
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Cotton Bedsheet Set", "home", 86),
+    images: [productThumbnail("Cotton Bedsheet Set", "home", 86)],
     "description": "Quality cotton bedsheet set selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2536,10 +2380,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.7,
     "ratingCount": 644,
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Microfiber Pillow Pair", "home", 87),
+    images: [productThumbnail("Microfiber Pillow Pair", "home", 87)],
     "description": "Quality microfiber pillow pair selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2566,10 +2408,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.8,
     "ratingCount": 651,
-    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Bath Towel Set", "home", 88),
+    images: [productThumbnail("Bath Towel Set", "home", 88)],
     "description": "Quality bath towel set selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2596,10 +2436,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.9,
     "ratingCount": 658,
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Curtain Pair", "home", 89),
+    images: [productThumbnail("Curtain Pair", "home", 89)],
     "description": "Quality curtain pair selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2626,10 +2464,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4,
     "ratingCount": 665,
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Decorative Table Lamp", "home", 90),
+    images: [productThumbnail("Decorative Table Lamp", "home", 90)],
     "description": "Quality decorative table lamp selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2656,10 +2492,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.1,
     "ratingCount": 672,
-    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Wall Clock", "home", 91),
+    images: [productThumbnail("Wall Clock", "home", 91)],
     "description": "Quality wall clock selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2686,10 +2520,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.2,
     "ratingCount": 679,
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Laundry Basket", "home", 92),
+    images: [productThumbnail("Laundry Basket", "home", 92)],
     "description": "Quality laundry basket selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2716,10 +2548,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.3,
     "ratingCount": 686,
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Floor Mat Set", "home", 93),
+    images: [productThumbnail("Floor Mat Set", "home", 93)],
     "description": "Quality floor mat set selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2746,10 +2576,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.4,
     "ratingCount": 693,
-    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Insulated Lunch Box", "home", 94),
+    images: [productThumbnail("Insulated Lunch Box", "home", 94)],
     "description": "Quality insulated lunch box selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2776,10 +2604,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.5,
     "ratingCount": 700,
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Reusable Food Containers", "home", 95),
+    images: [productThumbnail("Reusable Food Containers", "home", 95)],
     "description": "Quality reusable food containers selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2806,10 +2632,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.6,
     "ratingCount": 707,
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Vacuum Flask 1L", "home", 96),
+    images: [productThumbnail("Vacuum Flask 1L", "home", 96)],
     "description": "Quality vacuum flask 1l selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2836,10 +2660,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.7,
     "ratingCount": 714,
-    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Watering Can", "home", 97),
+    images: [productThumbnail("Watering Can", "home", 97)],
     "description": "Quality watering can selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2866,10 +2688,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.8,
     "ratingCount": 721,
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Indoor Planter Set", "home", 98),
+    images: [productThumbnail("Indoor Planter Set", "home", 98)],
     "description": "Quality indoor planter set selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2896,10 +2716,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4.9,
     "ratingCount": 728,
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Foldable Study Table", "home", 99),
+    images: [productThumbnail("Foldable Study Table", "home", 99)],
     "description": "Quality foldable study table selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
@@ -2926,10 +2744,8 @@ const EXTRA_PRODUCTS = [
     "seller": "Ghar Home",
     "rating": 4,
     "ratingCount": 735,
-    "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop&auto=format&q=80"
-    ],
+    image: productThumbnail("Office Chair Cushion", "home", 100),
+    images: [productThumbnail("Office Chair Cushion", "home", 100)],
     "description": "Quality office chair cushion selected for everyday value and reliable use.",
     "highlights": [
       "Quality checked",
