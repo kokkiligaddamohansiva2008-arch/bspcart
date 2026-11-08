@@ -144,7 +144,7 @@ export default function ProductDetails() {
         {/* Gallery */}
         <div className="pd-gallery">
           <div className="pd-gallery-main">
-            <img src={product.images?.[activeImage] || product.image || fallbackImage} alt={product.name} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = fallbackImage; }} />
+            <img src={product.images?.[activeImage] || product.imageUrl || product.image || fallbackImage} alt={product.name} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = fallbackImage; }} />
             {product.deal && <span className="pd-deal-ribbon">Limited-time deal</span>}
           </div>
           {product.images && product.images.length > 1 && (
