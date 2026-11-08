@@ -256,7 +256,7 @@ export default function ProductDetails() {
                 </LineChart>
               </ResponsiveContainer>
             </div>
-            <p className="pd-emi-note">Last 7 weeks — lowest price is highlighted by the current deal, if any.</p>
+            <p className="pd-muted-note">Last 7 weeks — lowest price is highlighted by the current deal, if any.</p>
           </div>
         </div>
       </div>
