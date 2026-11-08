@@ -24,15 +24,6 @@ import useCart from "../hooks/useCart";
 import { FiHeart, FiStar } from "react-icons/fi";
 import "./ProductDetails.css";
 
-const EMI_ANNUAL_RATE = 0.14; // representative 14% p.a., shown for illustration only
-const EMI_TENURES = [3, 6, 9, 12];
-
-function calculateEmi(principal, months, annualRate = EMI_ANNUAL_RATE) {
-  const r = annualRate / 12;
-  if (r === 0) return principal / months;
-  const emi = (principal * r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1);
-  return emi;
-}
 
 // Deterministic mock reviews so the page doesn't feel empty
 function buildMockReviews(product) {
@@ -92,7 +83,6 @@ export default function ProductDetails() {
   const [activeImage, setActiveImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [wishlisted, setWishlisted] = useState(false);
-  const [tenure, setTenure] = useState(EMI_TENURES[1]);
 
   useEffect(() => {
     if (product) {
@@ -252,31 +242,8 @@ export default function ProductDetails() {
           <p className="pd-description">{product.description}</p>
         </div>
 
-        {/* EMI + Price history */}
+        {/* Price history */}
         <div className="pd-side">
-          <div className="pd-card">
-            <h3>EMI options</h3>
-            <div className="pd-emi-tenures">
-              {EMI_TENURES.map((t) => (
-                <button
-                  key={t}
-                  className={"pd-emi-pill" + (t === tenure ? " active" : "")}
-                  onClick={() => setTenure(t)}
-                >
-                  {t} mo
-                </button>
-              ))}
-            </div>
-            <p className="pd-emi-amount">
-              {formatINR(Math.round(calculateEmi(effectivePrice, tenure)))}
-              <span>/month</span>
-            </p>
-            <p className="pd-emi-note">
-              Estimated at {Math.round(EMI_ANNUAL_RATE * 100)}% p.a. — illustrative only, subject to bank/card
-              approval.
-            </p>
-          </div>
-
           <div className="pd-card">
             <h3>Price history</h3>
             <div className="pd-chart-wrap">
