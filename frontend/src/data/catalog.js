@@ -183,8 +183,8 @@ export const PRODUCTS = [
   },
 ];
 
-// Additional curated products: IDs 9–100. Category-specific photos are
-// hosted by Unsplash; each entry uses the same shape as the original catalog.
+// Additional curated products: IDs 9–100. Each entry uses a lightweight
+// product-specific local SVG thumbnail instead of a remote image URL.
 const EXTRA_PRODUCTS = [
   {
     "id": 9,
