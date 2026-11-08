@@ -12,6 +12,8 @@
 |
 */
 
+import { productThumbnail } from "./additionalProducts";
+
 export const CATEGORIES = [
   { id: "all", label: "All Stalls" },
   { id: "grocery", label: "Grocery" },
@@ -25,17 +27,17 @@ export const CATEGORIES = [
 // actually matched the product name it labeled. Each product below points
 // at a specific, real photo of that product category instead.
 const PRODUCT_PHOTOS = {
-  rice: "https://images.unsplash.com/photo-1723475158232-819e29803f4d",
-  groundnutOil: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5",
-  earbuds: "https://images.unsplash.com/photo-1525825691042-e14d9042fc70",
-  charger: "https://images.unsplash.com/photo-1544894485-42c6e60e37a0",
-  saree: "https://images.unsplash.com/photo-1679849922748-f59ba2e10c10",
-  kurta: "https://images.unsplash.com/photo-1758913340758-88d5719d37f3",
-  tawa: "https://images.unsplash.com/photo-1581622558638-818128465982",
-  bottle: "https://images.unsplash.com/photo-1544003484-3cd181d17917",
+  rice: productThumbnail("Basmati Rice 5kg", "Groceries & Staples", 0),
+  groundnutOil: productThumbnail("Cold-Pressed Groundnut Oil 1L", "Groceries & Staples", 1),
+  earbuds: productThumbnail("Wireless Earbuds", "Electronics & Accessories", 2),
+  charger: productThumbnail("USB-C Fast Charger 33W", "Electronics & Accessories", 3),
+  saree: productThumbnail("Cotton Handloom Saree", "Women's Fashion", 4),
+  kurta: productThumbnail("Men's Kurta Set", "Men's Fashion", 5),
+  tawa: productThumbnail("Non-Stick Tawa 28cm", "Kitchen & Dining", 6),
+  bottle: productThumbnail("Steel Water Bottle 1L", "Kitchen & Dining", 7),
 };
 
-const img = (url) => `${url}?w=600&h=450&fit=crop&auto=format&q=80`;
+const img = (url) => url;
 
 export const PRODUCTS = [
   {
